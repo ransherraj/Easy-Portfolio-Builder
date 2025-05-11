@@ -195,52 +195,6 @@ export { codingProfiles };
 ```
 ---
 
-## 🌐 Deploy in 60 Seconds
-
-### ▶ GitHub Pages
-
-\`\`\`bash
-# Add homepage in package.json
-"homepage": "https://yourusername.github.io/portfolio-builder"
-
-# Build & Deploy
-npm run build
-npm install --save gh-pages
-npm run deploy
-\`\`\`
-
-### ▶ Netlify (🔥 Fastest)
-
-- Login to [Netlify](https://netlify.com)
-- Drag your \`/build\` folder to the dashboard
-- Done 🎉
-
-### ▶ Vercel
-
-\`\`\`bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-\`\`\`
-
----
-
-## 📁 Folder Structure
-
-\`\`\`
-portfolio-builder/
-├── public/
-├── src/
-│   ├── components/
-│   ├── config/  ← YOU edit here
-│   ├── App.js
-├── portfolio.config.js ← Main config file
-├── package.json
-\`\`\`
-
----
 
 ## 💼 Ideal For
 
