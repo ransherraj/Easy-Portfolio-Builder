@@ -212,19 +212,19 @@ export { codingProfiles };
 
 ## 🙌 Contribute & Improve
 
-\`\`\`bash
+```bash
 # Fork → Code → Pull Request
 
 git checkout -b feature/your-awesome-feature
 git commit -m "Added new section to portfolio"
 git push origin feature/your-awesome-feature
-\`\`\`
+```
 
 ---
 
 ## 🔒 License
 
-MIT License © 2025 [Your Name](https://github.com/yourusername)
+MIT License © 2025 [ransherraj](https://github.com/ransherraj)
 
 ---
 
