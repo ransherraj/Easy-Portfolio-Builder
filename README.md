@@ -29,8 +29,11 @@
 
 
 # Clone the repo
+```
 git clone https://github.com/ransherraj/Easy-Portfolio-Builder.git
+
 cd Easy-Portfolio-Builder
+```
 
 # Install dependencies
 npm install
