@@ -10,7 +10,7 @@
 
 ## 📸 Live Demo
 
-👉 [Click to View Demo](https://your-live-link.vercel.app)
+👉 [Click to View Demo](https://ransherraj.netlify.app)
 
 ---
 
@@ -27,9 +27,9 @@
 
 ## 🚀 Quick Start (Copy-Paste All 🔥)
 
-\`\`\`bash
+
 # Clone the repo
-git clone https://github.com/yourusername/portfolio-builder.git
+git clone https://github.com/ransherraj/Easy-Portfolio-Builder.git
 cd portfolio-builder
 
 # Install dependencies
@@ -41,7 +41,7 @@ yarn install
 npm start
 # or
 yarn start
-\`\`\`
+
 
 Now open [http://localhost:3000](http://localhost:3000) to see your stunning portfolio.
 
