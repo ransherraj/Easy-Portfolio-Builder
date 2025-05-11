@@ -51,7 +51,7 @@ Now open [http://localhost:3000](http://localhost:3000) to see your stunning por
 
 Just edit the `src/content_options.js` file and done
 
-const logotext = "John Doe";
+```const logotext = "John Doe";
 
 const meta = {
     title: "John Doe",
@@ -192,7 +192,7 @@ const codingProfiles = {
 };
 
 export { codingProfiles };
-
+```
 ---
 
 ## 🌐 Deploy in 60 Seconds
