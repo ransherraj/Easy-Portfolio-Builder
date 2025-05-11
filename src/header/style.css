@@ -205,3 +205,114 @@
     margin-right: 10px;
     text-decoration: none;
 }
+
+
+
+/* Default: All links are visible */
+.nav_ac.hide-contact,
+.nav_ac.hide-github,
+.nav_ac.hide-profiles,
+.nav_ac.hide-about,
+.nav_ac.hide-portfolio {
+  display: inline-block;
+}
+
+/* Hide Contact below 992px */
+@media (max-width: 991.98px) {
+  .nav_ac.hide-contact {
+    display: none;
+  }
+}
+
+/* Hide Github below 900px */
+@media (max-width: 899.98px) {
+  .nav_ac.hide-github {
+    display: none;
+  }
+}
+
+/* Hide Profiles below 800px */
+@media (max-width: 799.98px) {
+  .nav_ac.hide-profiles {
+    display: none;
+  }
+}
+
+/* Hide About below 700px */
+@media (max-width: 699.98px) {
+  .nav_ac.hide-about {
+    display: none;
+  }
+}
+
+/* Hide Portfolio below 600px */
+@media (max-width: 599.98px) {
+  .nav_ac.hide-portfolio {
+    display: none;
+  }
+}
+
+.menu__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .the_menu {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+
+  @media (min-width: 992px) {
+    .menu__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-left: 0 !important; /* override previous left-margin */
+    }
+  
+    .the_menu {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .the_menu .menu_item > a {
+      font-size: 1.8rem; /* Reduce font size for visibility */
+    }
+  }
+
+
+  .menu_footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .menu_footer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .menu_footer .social-icons {
+      margin-bottom: 0.5rem;
+    }
+  
+    .menu_footer p {
+      margin-top: 0.25rem;
+    }
+  }
+  
+  

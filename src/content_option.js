@@ -1,157 +1,94 @@
-const logotext = "JOHN";
+const logotext = "John Doe";
+
 const meta = {
     title: "John Doe",
-    description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
+    description: "I’m John Doe, a full-stack developer.",
 };
 
 const introdata = {
     title: "I’m John Doe",
     animated: {
-        first: "I love coding",
-        second: "I code cool websites",
-        third: "I develop mobile apps",
+        first: "I love coding...",
+        second: "I build full-stack apps...",
+        third: "I solve tech problems...",
     },
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
+    description: "Software Engineer with experience in building responsive and performant applications using modern tech stacks.",
+    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d", // Placeholder image
 };
 
 const dataabout = {
-    title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    title: "About Me",
+    aboutme: "I am a software developer passionate about creating clean, scalable, and user-friendly digital solutions.",
 };
-const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
-    },
+
+const worktimeline = [
     {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
-    },
-    {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
+        jobtitle: "Software Developer",
+        where: "Tech Company",
+        date: "2022 – Present",
+        achievement: "Contributed to various web and mobile projects.",
     },
 ];
 
-const skills = [{
-        name: "Python",
-        value: 90,
+const skills = [
+    { name: "JavaScript", value: 90 },
+    { name: "React.js", value: 85 },
+    { name: "Node.js", value: 80 },
+    { name: "TypeScript", value: 80 },
+    { name: "Spring Boot", value: 75 },
+    { name: "AWS", value: 70 },
+    { name: "SQL / NoSQL", value: 80 },
+    { name: "HTML/CSS", value: 85 },
+];
+
+const services = [
+    {
+        title: "Web Development",
+        description: "Building responsive and modern web applications.",
     },
     {
-        name: "Djano",
-        value: 85,
+        title: "API Integration",
+        description: "Creating and consuming RESTful services.",
     },
     {
-        name: "Javascript",
-        value: 80,
-    },
-    {
-        name: "React",
-        value: 60,
-    },
-    {
-        name: "Jquery",
-        value: 85,
+        title: "Cloud Deployment",
+        description: "Deploying scalable solutions to the cloud.",
     },
 ];
 
-const services = [{
-        title: "UI & UX Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
+const dataportfolio = [
     {
-        title: "Mobile Apps",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Wordpress Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-];
-
-const dataportfolio = [{
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
+        img: "https://picsum.photos/400/300",
+        description: "Project One – A demo application.",
+        details: "A sample project showcasing frontend/backend integration.",
         link: "#",
+        demo: "#"
     },
     {
-        img: "https://picsum.photos/400/800/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
+        img: "https://picsum.photos/400/300?2",
+        description: "Project Two – Another demo app.",
+        details: "Illustrates clean UI/UX with basic functionality.",
         link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/550/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
+        demo: "#"
+    }
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "name@domain.com",
-    YOUR_FONE: "(555)123-4567",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_EMAIL: "demo@example.com",
+    YOUR_FONE: "1234567890",
+    description: "Feel free to get in touch for collaboration or freelance work!",
+    YOUR_SERVICE_ID: "demo_service_id",
+    YOUR_TEMPLATE_ID: "demo_template_id",
+    YOUR_USER_ID: "demo_user_id",
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/demo",
+    linkedin: "https://linkedin.com/in/demo",
+    instagram: "https://instagram.com/demo",
+    twitter: "https://twitter.com/demo",
 };
+
 export {
     meta,
     dataabout,
@@ -164,3 +101,41 @@ export {
     socialprofils,
     logotext,
 };
+
+// Optional additional data section (also anonymized)
+const resumeData = {
+    education: [
+        {
+            degree: "Bachelor's Degree in Computer Science",
+            institution: "Demo University",
+            year: "2016 - 2020",
+            grade: "8.5 CGPA",
+        }
+    ],
+    achievements: [
+        "Completed full-stack capstone projects.",
+        "Contributed to open-source tools.",
+        "Developed demo applications for learning.",
+    ],
+    certifications: [
+        "Full Stack Web Development – Demo Course",
+        "Cloud Fundamentals – Demo Certification",
+    ],
+    resumeLink: "https://example.com/resume.pdf",
+};
+
+export { resumeData };
+
+const githubConfig = {
+    username: "demo",
+    profileUrl: "https://github.com/demo"
+};
+
+export { githubConfig };
+
+const codingProfiles = {
+    leetcodeUsername: "demoUser",
+    codeforcesHandle: "demoHandle"
+};
+
+export { codingProfiles };

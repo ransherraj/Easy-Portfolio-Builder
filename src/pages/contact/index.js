@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
+import axios from "axios";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
@@ -28,6 +29,21 @@ export const ContactUs = () => {
       message: formData.message,
     };
 
+    const senderdata = {
+      email: formData.email,
+      name: formData.name,
+      message: formData.message,
+    };
+
+    try{
+      const res = axios.post("https://bookrrserver.onrender.com/api/sendmail",senderdata);
+      res.then((res) => {
+        console.log(res);
+      })
+    }catch(e){
+      console.log(e);
+    }
+
     emailjs
       .send(
         contactConfig.YOUR_SERVICE_ID,
@@ -39,6 +55,9 @@ export const ContactUs = () => {
         (result) => {
           console.log(result.text);
           setFormdata({
+            email: "",
+            name: "",
+            message: "",
             loading: false,
             alertmessage: "SUCCESS! ,Thankyou for your messege",
             variant: "success",

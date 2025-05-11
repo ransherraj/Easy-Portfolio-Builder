@@ -8,6 +8,7 @@ import {
   worktimeline,
   skills,
   services,
+  resumeData,
 } from "../../content_option";
 
 export const About = () => {
@@ -16,82 +17,148 @@ export const About = () => {
       <Container className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> About | {meta.title}</title>
+          <title>About | {meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <Row className="mb-5 mt-3 pt-md-3">
-          <Col lg="8">
-            <h1 className="display-4 mb-4">About me</h1>
-            <hr className="t_border my-4 ml-0 text-left" />
+
+        <Row className="mb-3">
+          <Col>
+            <h1 className="display-4 mb-2">About me</h1>
+            <hr className="t_border my-2 ml-0 text-left" />
           </Col>
         </Row>
-        <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">{dataabout.title}</h3>
+
+        <Row className="mb-4">
+          <Col>
+            {/* <h3 className="color_sec mb-2">{dataabout.title}</h3> */}
+            <p>{dataabout.aboutme}</p>
           </Col>
-          <Col lg="7" className="d-flex align-items-center">
-            <div>
-              <p>{dataabout.aboutme}</p>
+        </Row>
+
+
+        <Row className="mb-4">
+  <Col>
+    <h1 className="color_sec mb-2">Education</h1>
+    <div className="table-responsive">
+      <table className="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Degree</th>
+            <th>Institution</th>
+            <th>Year</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          {resumeData.education.map((edu, index) => (
+            <tr key={index}>
+              <td>{edu.degree}</td>
+              <td>{edu.institution}</td>
+              <td>{edu.year}</td>
+              <td>{edu.grade}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </Col>
+</Row>
+
+
+        <Row className="mb-4">
+          <Col>
+            <h1 className="color_sec mb-2">Work Timeline</h1>
+            <div className="table-responsive">
+              <table className="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Role</th>
+                    <th>Organization</th>
+                    <th>Duration</th>
+                    <th>Achievement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {worktimeline.map((data, i) => (
+                    <tr key={i}>
+                      <td>{data.jobtitle}</td>
+                      <td>{data.where}</td>
+                      <td>{data.date}</td>
+                      <td>{data.achievement}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </Col>
         </Row>
-        <Row className=" sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">Work Timline</h3>
-          </Col>
-          <Col lg="7">
-            <table className="table caption-top">
-              <tbody>
-                {worktimeline.map((data, i) => {
-                  return (
-                    <tr key={i}>
-                      <th scope="row">{data.jobtitle}</th>
-                      <td>{data.where}</td>
-                      <td>{data.date}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </Col>
-        </Row>
-        <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">Skills</h3>
-          </Col>
-          <Col lg="7">
-            {skills.map((data, i) => {
-              return (
-                <div key={i}>
-                  <h3 className="progress-title">{data.name}</h3>
-                  <div className="progress">
+
+        <Row className="mb-4">
+          <Col>
+            <h1 className="color_sec mb-2">Skills</h1>
+            <Row>
+              {skills.map((data, i) => (
+                <Col md={6} className="mb-3" key={i}>
+                  <h6 className="progress-title mb-1">{data.name}</h6>
+                  <div
+                    className="progress"
+                    style={{ height: "20px", backgroundColor: "#e0e0e0" }}
+                  >
                     <div
                       className="progress-bar"
                       style={{
                         width: `${data.value}%`,
+                        backgroundColor: "var(--bs-primary)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                       }}
+                      role="progressbar"
+                      aria-valuenow={data.value}
+                      aria-valuemin="0"
+                      aria-valuemax="100"
                     >
-                      <div className="progress-value">{data.value}%</div>
+                      <span
+                        className="progress-title"
+                        style={{ fontSize: "0.8rem", color: "#fff" }}
+                      >
+                        {data.value}%
+                      </span>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                </Col>
+              ))}
+            </Row>
           </Col>
         </Row>
-        <Row className="sec_sp">
-          <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
-          </Col>
-          <Col lg="7">
-            {services.map((data, i) => {
-              return (
-                <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
-                  <p className="service_desc">{data.description}</p>
+
+        <Row className="mb-4">
+          <Col>
+            <h1 className="color_sec mb-2">Services</h1>
+            <Row>
+              {services.map((data, i) => (
+                <Col md={6} key={i} className="mb-2">
+                  <div className="service_">
+                    <h5 className="service__title">{data.title}</h5>
+                    <p className="service_desc">{data.description}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+            <div className="mt-4 mb-4">
+              <a
+                href={resumeData.resumeLink ? resumeData.resumeLink : "#"} // Replace with your actual resume link
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div id="button_h" className="ac_btn btn">
+                  My Resume
+                  <div className="ring one"></div>
+                  <div className="ring two"></div>
+                  <div className="ring three"></div>
                 </div>
-              );
-            })}
+              </a>
+            </div>
           </Col>
         </Row>
       </Container>
